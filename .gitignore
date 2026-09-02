@@ -6,3 +6,9 @@
 *.bak
 *.lck
 *-backups/
+#SolidWorks temporary and backup files
+~$*
+*,bak
+*.swp
+*.err
+*.dmp
