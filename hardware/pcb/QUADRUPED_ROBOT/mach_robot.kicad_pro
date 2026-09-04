@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 1.27
+          "drill": 0.0,
+          "height": 1.5,
+          "width": 1.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -78,11 +78,11 @@
       ],
       "drc_exclusions": [
         [
-          "unconnected_items|57657500|43060000|F.Cu|4|d096317a-cff2-4ca0-8f94-bce2703e1a0f|5fa2913c-ce68-4260-a496-c8211c239492",
+          "unconnected_items|57657500|43060000|F.Cu|4|67abda78-6854-49cd-aa88-ff9312495139|16542aa9-b57d-42f4-ba67-755ee8b9d774",
           ""
         ],
         [
-          "unconnected_items|57657500|44960000|F.Cu|4|2fee5dec-f30e-45c8-8330-60e4fc515347|bb8c7406-bee6-4622-a5a0-3dad460c6960",
+          "unconnected_items|57657500|44960000|F.Cu|4|9ea71224-b54a-476c-abd6-a7988f647f99|5a9b941b-b374-4054-9014-0c340bc4751b",
           ""
         ]
       ],
@@ -634,7 +634,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "./",
-      "plot": "",
+      "plot": "gerber/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -771,7 +771,7 @@
         "uuid": "ce7e0c30-8583-42bc-9650-dfb9f937c8b7"
       }
     ],
-    "used_designators": "H1-4,U1-5,F1-2,Q1-4,P1-3,Y1,#PWR1-103,C1-63,D1-14,R1-58,SW1-2,J1-24,L1-2",
+    "used_designators": "H1-4,U1-5,F1-2,Q1-4,P1-3,Y1,#PWR1-112,C1-64,D1-14,R1-64,SW1-2,J1-24,L1-2",
     "variants": []
   },
   "sheets": [
