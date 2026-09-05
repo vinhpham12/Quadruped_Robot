@@ -82,7 +82,7 @@
           ""
         ],
         [
-          "unconnected_items|57657500|44960000|F.Cu|4|9ea71224-b54a-476c-abd6-a7988f647f99|5a9b941b-b374-4054-9014-0c340bc4751b",
+          "unconnected_items|57657500|44960000|F.Cu|4|3e5ae9e5-812e-45d8-9746-17ed9f6ae51f|5a9b941b-b374-4054-9014-0c340bc4751b",
           ""
         ]
       ],
@@ -263,7 +263,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.5,
+          "diameter": 0.6,
           "drill": 0.3
         },
         {
