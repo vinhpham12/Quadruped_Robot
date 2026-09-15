@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-9.45163119991932E-09 7.06131713518188E-09 0.000469638601296729"
+        rpy="0 0 0" />
+      <mass
+        value="0.32654744983969" />
+      <inertia
+        ixx="0.00039128933651843"
+        ixy="2.94366243586261E-12"
+        ixz="-1.13557370429694E-14"
+        iyy="0.000178962951369752"
+        iyz="-2.64642012362533E-11"
+        izz="0.000422717056792484" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hip_RF">
+    <inertial>
+      <origin
+        xyz="0.0103300131276021 -0.00236050016605652 0.029807952612241"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691270911890896" />
+      <inertia
+        ixx="1.60873094204347E-05"
+        ixy="-5.84187787642763E-07"
+        ixz="4.21531537123514E-08"
+        iyy="1.1571669938581E-05"
+        iyz="-5.35798944978556E-09"
+        izz="1.03221383293388E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/hip_RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/hip_RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_RF"
+    type="revolute">
+    <origin
+      xyz="-0.0449999990053749 -0.0954992291155026 0.00938098000774029"
+      rpy="1.57079632800763 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip_RF" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Thigh_RF">
+    <inertial>
+      <origin
+        xyz="0.0331166133623511 -0.022498006276331 0.0104420535274953"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136519261061882" />
+      <inertia
+        ixx="5.05284929892426E-06"
+        ixy="6.38129624308877E-06"
+        ixz="-1.83817581921051E-07"
+        iyy="1.00875867480176E-05"
+        iyz="1.2508924082245E-07"
+        izz="1.46391765367413E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_RF"
+    type="revolute">
+    <origin
+      xyz="-0.00304406186672296 -0.0253133727377505 0.0198618943689335"
+      rpy="1.5707963267949 0 -0.126207137233731" />
+    <parent
+      link="hip_RF" />
+    <child
+      link="Thigh_RF" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Calf_RF">
+    <inertial>
+      <origin
+        xyz="0.039540064855364 0.0404332064585719 0.00939524697025501"
+        rpy="0 0 0" />
+      <mass
+        value="0.00886601522787845" />
+      <inertia
+        ixx="9.85177034364646E-06"
+        ixy="-7.28224128736067E-06"
+        ixz="-2.86406647323465E-07"
+        iyy="6.28866080317315E-06"
+        iyz="-3.29413300656583E-07"
+        izz="1.54522777424201E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_RF"
+    type="revolute">
+    <origin
+      xyz="0.0826731320829293 -0.0562215942551578 0.00130000015939194"
+      rpy="0 0 0" />
+    <parent
+      link="Thigh_RF" />
+    <child
+      link="Calf_RF" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Foot_RF">
+    <inertial>
+      <origin
+        xyz="-0.00583271207371466 8.32809238238141E-10 0.000153322583618179"
+        rpy="0 0 0" />
+      <mass
+        value="0.00230350114184203" />
+      <inertia
+        ixx="2.28786125408295E-07"
+        ixy="-1.96361126256425E-16"
+        ixz="3.24629289149191E-11"
+        iyy="1.24696640318976E-07"
+        iyz="-8.67255532960835E-15"
+        izz="1.62073483944388E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4_RF"
+    type="fixed">
+    <origin
+      xyz="0.0891649502501446 0.0782187293415921 0.00992243475665497"
+      rpy="0 0 0.0177993522340094" />
+    <parent
+      link="Calf_RF" />
+    <child
+      link="Foot_RF" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Hip_LB">
+    <inertial>
+      <origin
+        xyz="0.0105447526495833 -0.00105257491112548 0.0298079695316534"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691271451331567" />
+      <inertia
+        ixx="1.61616628485017E-05"
+        ixy="-1.80291849208032E-09"
+        ixz="4.24922338562263E-08"
+        iyy="1.14973257658433E-05"
+        iyz="-9.44030438112242E-12"
+        izz="1.03221476979768E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Hip_LB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Hip_LB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_LB"
+    type="revolute">
+    <origin
+      xyz="0.0449999967362847 0.0954992300103887 0.009380981274699"
+      rpy="1.57079628324533 1.40431060818658 3.14159260942963" />
+    <parent
+      link="base_link" />
+    <child
+      link="Hip_LB" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Thigh_LB">
+    <inertial>
+      <origin
+        xyz="0.039939 0.0030336 0.010442"
+        rpy="0 0 0" />
+      <mass
+        value="0.013652" />
+      <inertia
+        ixx="7.91E-07"
+        ixy="-1.049E-06"
+        ixz="-2.2169E-07"
+        iyy="1.4349E-05"
+        iyz="-1.705E-08"
+        izz="1.4639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_LB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_LB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_LB"
+    type="revolute">
+    <origin
+      xyz="0.000166183759488514 -0.0255063180457349 0.0399381057123354"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Hip_LB" />
+    <child
+      link="Thigh_LB" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Calf_LB">
+    <inertial>
+      <origin
+        xyz="0.0445338784719274 -0.0348569483569772 0.00939526528387763"
+        rpy="0 0 0" />
+      <mass
+        value="0.00886599176378451" />
+      <inertia
+        ixx="7.88287947495784E-06"
+        ixy="7.49463599289693E-06"
+        ixz="-3.27396776616415E-07"
+        iyy="8.25750643837627E-06"
+        iyz="2.88695473491359E-07"
+        izz="1.54522359887978E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_LB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_LB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_LB"
+    type="revolute">
+    <origin
+      xyz="0.0997055503615685 0.00763018747714993 0.00130000001065278"
+      rpy="0 0 0" />
+    <parent
+      link="Thigh_LB" />
+    <child
+      link="Calf_LB" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Foot_LB">
+    <inertial>
+      <origin
+        xyz="-0.00583271273119668 -7.55717835532188E-10 -0.000153322637857278"
+        rpy="0 0 0" />
+      <mass
+        value="0.00230350113779985" />
+      <inertia
+        ixx="2.28786124921254E-07"
+        ixy="1.82379717533276E-16"
+        ixz="-3.24629530106639E-11"
+        iyy="1.24696639794072E-07"
+        iyz="-8.68323399060686E-15"
+        izz="1.62073483804378E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_LB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_LB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4_LB"
+    type="fixed">
+    <origin
+      xyz="0.0987143958873673 -0.0657573267211811 0.0102631627484327"
+      rpy="0 0 0.114659882597004" />
+    <parent
+      link="Calf_LB" />
+    <child
+      link="Foot_LB" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Hip_RB">
+    <inertial>
+      <origin
+        xyz="0.0105452609176706 0.00104594084884074 0.0298079699337593"
+        rpy="0 0 0" />
+      <mass
+        value="0.069127145268005" />
+      <inertia
+        ixx="1.61616628620183E-05"
+        ixy="-1.80294693173817E-09"
+        ixz="4.24935621654107E-08"
+        iyy="1.14973257965861E-05"
+        iyz="-9.42821987238999E-12"
+        izz="1.03221477460484E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Hip_RB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Hip_RB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_RB"
+    type="revolute">
+    <origin
+      xyz="-0.0450000037192648 0.0954992301195679 0.00938098156076461"
+      rpy="1.57079610030804 1.53892626120084 3.14159242600521" />
+    <parent
+      link="base_link" />
+    <child
+      link="Hip_RB" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Thigh_RB">
+    <inertial>
+      <origin
+        xyz="0.0282258223905612 -0.0283852846225201 0.0104420538799815"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136519260992832" />
+      <inertia
+        ixx="7.61806669522614E-06"
+        ixy="6.85972284582231E-06"
+        ixz="-1.56670695876405E-07"
+        iyy="7.52236935261053E-06"
+        iyz="1.57767282676775E-07"
+        izz="1.46391765370845E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_RB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_RB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_RB"
+    type="revolute">
+    <origin
+      xyz="0.00016669 0.025499 0.039938"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Hip_RB" />
+    <child
+      link="Thigh_RB" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Calf_RB">
+    <inertial>
+      <origin
+        xyz="0.0298392314801701 0.0480404396153255 0.00939525175445749"
+        rpy="0 0 0" />
+      <mass
+        value="0.00886600450407864" />
+      <inertia
+        ixx="1.27654233192966E-05"
+        ixy="-5.84463955870149E-06"
+        ixz="-2.08221498282484E-07"
+        iyy="3.37499191800128E-06"
+        iyz="-3.83645225922632E-07"
+        izz="1.54522632670118E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_RB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_RB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_RB"
+    type="revolute">
+    <origin
+      xyz="0.0704636394572004 -0.0709187536109075 0.00130000022489368"
+      rpy="0 0 0" />
+    <parent
+      link="Thigh_RB" />
+    <child
+      link="Calf_RB" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Foot_RB">
+    <inertial>
+      <origin
+        xyz="-0.005832712651619 -1.31924540736073E-10 0.000153322686789858"
+        rpy="0 0 0" />
+      <mass
+        value="0.00230350114512336" />
+      <inertia
+        ixx="2.28786125802201E-07"
+        ixy="7.37473962864157E-17"
+        ixz="3.24627459204852E-11"
+        iyy="1.24696640759035E-07"
+        iyz="-8.65541790093915E-15"
+        izz="1.62073484063457E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_RB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_RB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4_RB"
+    type="fixed">
+    <origin
+      xyz="0.0700973869395912 0.0956813164477049 0.00992243475665266"
+      rpy="0 0 0.236220194369359" />
+    <parent
+      link="Calf_RB" />
+    <child
+      link="Foot_RB" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Hip_LF">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Hip_LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Hip_LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_LF"
+    type="revolute">
+    <origin
+      xyz="0.0450000009972144 -0.0954992292242923 0.00938098007435328"
+      rpy="-1.57079649690177 1.52835768215523 3.14159248242334" />
+    <parent
+      link="base_link" />
+    <child
+      link="Hip_LF" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Thigh_LF">
+    <inertial>
+      <origin
+        xyz="0.0366558640545711 0.0161153357389864 0.0104420545265848"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136519261330692" />
+      <inertia
+        ixx="2.94140325736705E-06"
+        ixy="-5.06282142591295E-06"
+        ixz="-2.03462474117924E-07"
+        iyy="1.219903275575E-05"
+        iyz="-8.96615065836568E-08"
+        izz="1.46391765506952E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Thigh_LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_LF"
+    type="revolute">
+    <origin
+      xyz="0.000166676854179038 0.0255016149609894 0.0198618943495757"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="Hip_LF" />
+    <child
+      link="Thigh_LF" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Calf_LF">
+    <inertial>
+      <origin
+        xyz="0.0418470572662776 -0.0380407355603225 0.00939526559262294"
+        rpy="0 0 0" />
+      <mass
+        value="0.00886599233857974" />
+      <inertia
+        ixx="8.98535147111174E-06"
+        ixy="7.44091057404067E-06"
+        ixz="-3.0525601570915E-07"
+        iyy="7.15503535762088E-06"
+        iyz="3.12012924752807E-07"
+        izz="1.54522367981263E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Calf_LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_LF"
+    type="revolute">
+    <origin
+      xyz="0.091508608335129 0.040287743110421 0.00130000035955524"
+      rpy="0 0 0" />
+    <parent
+      link="Thigh_LF" />
+    <child
+      link="Calf_LF" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1.5"
+      velocity="6" />
+  </joint>
+  <link
+    name="Foot_LF">
+    <inertial>
+      <origin
+        xyz="-0.00583271214280262 -4.09475425788841E-10 0.000153322762489805"
+        rpy="0 0 0" />
+      <mass
+        value="0.00230350113749122" />
+      <inertia
+        ixx="2.28786124866219E-07"
+        ixy="9.57286821261631E-17"
+        ixz="3.2462468537001E-11"
+        iyy="1.24696639739333E-07"
+        iyz="-8.64427163722192E-15"
+        izz="1.62073483791635E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_1/meshes/Foot_LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4_LF"
+    type="fixed">
+    <origin
+      xyz="0.0936058345991075 -0.072845766534023 0.00992243475665627"
+      rpy="0 0 0.0409782674287381" />
+    <parent
+      link="Calf_LF" />
+    <child
+      link="Foot_LF" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
