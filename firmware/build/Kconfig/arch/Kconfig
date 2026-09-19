@@ -1,0 +1,11 @@
+# Load arch Kconfig descriptions.
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/x86/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/xtensa/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/sparc/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/riscv/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/posix/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/nios2/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/mips/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/arm64/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/arm/Kconfig"
+osource "/home/pham_vinh/Desktop/zephyr_project/zephyr/arch/arc/Kconfig"

@@ -1,0 +1,1 @@
+"mcuboot":"/home/pham_vinh/Desktop/zephyr_project/bootloader/mcuboot":"/home/pham_vinh/Desktop/zephyr_project/bootloader/mcuboot/boot/zephyr/sysbuild"

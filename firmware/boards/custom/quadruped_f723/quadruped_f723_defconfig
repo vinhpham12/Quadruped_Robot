@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: Apache-2.0
+
+# Driver quản lý chân & Reset (Bắt buộc cho UART & GPIO)
+CONFIG_PINCTRL=y
+CONFIG_RESET=y
+
+# Driver Clock Controller cho STM32
+CONFIG_CLOCK_CONTROL=y
+
+# Bảo vệ bộ nhớ và stack
+CONFIG_ARM_MPU=y
+CONFIG_HW_STACK_PROTECTION=y
+
+# Serial & Console UART
+CONFIG_SERIAL=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+
+# GPIO
+CONFIG_GPIO=y

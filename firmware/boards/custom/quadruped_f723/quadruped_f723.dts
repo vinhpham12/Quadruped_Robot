@@ -1,0 +1,46 @@
+/dts-v1/;
+#include <st/f7/stm32f723Xe.dtsi>
+#include <st/f7/stm32f723i(c-e)kx-pinctrl.dtsi>
+
+/ {
+	model = "Quadruped Robot Controller F723";
+	compatible = "st,stm32f723ze", "st,stm32f7";
+
+	chosen {
+		zephyr,console = &usart1;
+		zephyr,shell-uart = &usart1;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+};
+
+/* Console log USART1: PA9 (TX), PA10 (RX) */
+&usart1 {
+	pinctrl-0 = <&usart1_tx_pa9 &usart1_rx_pa10>;
+	pinctrl-names = "default";
+	current-speed = <115200>;
+	status = "okay";
+};
+
+/* Cấu hình thạch anh ngoài HSE 25MHz & PLL lên 216MHz */
+&clk_hse {
+	clock-frequency = <DT_FREQ_M(25)>;
+	status = "okay";
+};
+
+&pll {
+	div-m = <25>;
+	mul-n = <432>;
+	div-p = <2>;
+	div-q = <9>;
+	clocks = <&clk_hse>;
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&pll>;
+	clock-frequency = <DT_FREQ_M(216)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <4>;
+	apb2-prescaler = <2>;
+};
